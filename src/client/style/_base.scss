@@ -1,0 +1,14 @@
+body {
+    background: gray;
+}
+
+dt {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}

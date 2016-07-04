@@ -1,0 +1,53 @@
+.auth {
+    &Form {
+        margin: 0 auto;
+        padding: 15px;
+        
+        max-width: 330px;
+        
+        background: #fff;
+        .form-control {
+            position: relative;
+            box-sizing: border-box;
+            padding: 10px;
+            height: auto;
+            font-size: 16px;
+        }
+        &-auxiliary {
+            text-align: center;
+        }
+    }
+}
+.profile {
+    &-picture {
+        padding: 20px 0;
+    }
+    &-header {
+        padding: 20px 0;
+        background: #999;
+    }
+    &-aboutMe {
+        padding: 20px 0;
+        background: #ececec;
+    }
+    &-education {
+        padding: 20px 0;
+        background: #999;
+    }
+    &-certificate {
+        padding: 20px 0;
+        background: #ececec;
+    }
+    &-experience {
+        padding: 20px 0;
+        background: #999;
+    }
+}
+// Editable container
+@import "components/editable-container";
+
+// Card
+@import "components/card";
+
+// Button
+@import "components/buttons";

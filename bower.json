@@ -1,0 +1,25 @@
+{
+  "name": "midterm",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Triet Dang"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/williamdang1710/web-midterm",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "latest",
+    "angular-bootstrap": "latest",
+    "angular-ui-router": "latest",
+    "angular-animate": "latest",
+    "firebase": "latest",
+    "angularfire": "latest"
+  }
+}

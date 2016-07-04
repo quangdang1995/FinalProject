@@ -1,0 +1,14 @@
+button {
+    &-follow {
+        display: inline-block;
+    }
+}
+.button {
+    &-follow {
+        &_description {
+            float: right;
+            
+            padding: 0 0 0 10px;
+        }
+    }
+}

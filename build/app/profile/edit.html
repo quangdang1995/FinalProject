@@ -1,0 +1,67 @@
+<div class="profile-header">
+    <div class="container text-center">
+        <img src="http://placehold.it/300x300" alt="" class="img-circle img-responsive center-block profile-picture">
+        <editable-container>
+            <h3>{{vm.account.profile.firstName}} {{vm.account.profile.lastName}}</h3>
+        </editable-container>
+    </div>
+</div>
+    
+<!-- About me -->
+<div class="profile-aboutMe">
+    <div class="container text-center">
+        <h3>About me</h3>
+        <editable-container>
+            <p>{{vm.account.profile.sumary}}</p>
+        </editable-container>
+        <button class="btn btn-primary" ng-click="" ng-show="vm.account.profile.sumary === null">Add</button>
+    </div>
+</div>
+    
+<!-- Education -->
+<div class="profile-education">
+    <div class="container text-center">
+        <h3>Education</h3>
+        <!-- Data -->
+        <editable-container
+            ng-repeat="education in vm.account.educations"
+            ng-hide="vm.selectedItem[2] == $index"
+            edit="vm.selectedItem[2] = $index; vm.editEducation(education)"
+            delete="vm.deleteEducation($index)">
+            <h4>{{education.school}}</h4>
+            <h5>{{education.major}}</h5>
+            <p>{{education.fromDate | date}} - 
+                <span ng-if="education.toDate != null">{{education.toDate | date}}</span>
+                <span ng-if="education.toDate == null">Now</span>
+            </p>
+        </editable-container>
+        <!-- Form -->
+        <form ng-show="vm.isInputing[2]">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="School" ng-model="vm.newEducation.school" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Major" ng-model="vm.newEducation.major" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Start Date" ng-model="vm.newEducation.fromDate" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Graduate Date" ng-model="vm.newEducation.toDate">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit" ng-click="vm.saveEducation()">Save</button>
+                <button class="btn btn-primary" ng-click="vm.cancelSaveEducation()">Cancel</button>
+            </div>
+        </form>
+        <button class="btn btn-primary" ng-click="vm.toggleInputForm(2)">Add</button>
+    </div>
+</div>
+<!-- Certificate -->
+<div class="profile-certificate">
+    <div class="container text-center">
+        <h3>Certificate</h3>
+        <button class="btn btn-primary" ng-click="">Add</button>
+    </div>
+</div>
+<!-- Experience -->

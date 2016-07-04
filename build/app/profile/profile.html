@@ -1,0 +1,35 @@
+<div class="container-fluid text-center profile-header">
+    <img src="http://placehold.it/300x300" alt="" class="img-circle img-responsive center-block profile-picture">
+    <h3>{{vm.account.profile.firstName}} {{vm.account.profile.lastName}}</h3>
+    <h4>{{vm.followedRecords.length}} follwer</h4>
+    <button class="btn btn-primary" ng-click="vm.follow()" ng-if="vm.isAlreadyFollowed == false">Follow</button>
+    <button class="btn btn-primary" ng-click="vm.follow()" ng-if="vm.isAlreadyFollowed == true">Unfollow</button>
+</div>
+<!-- About me -->
+<div class="container-fluid text-center profile-aboutMe">
+    <h3>About me</h3>
+    <p>{{vm.account.profile.sumary}}</p>
+</div>
+<!-- Education -->
+<div class="profile-education">
+    <div class="container text-center">
+        <h3>Education</h3>
+        <div
+            ng-repeat="education in vm.account.educations"
+            ng-hide="vm.selectedItem[2] == $index">
+            <h4>{{education.school}}</h4>
+            <h5>{{education.major}}</h5>
+            <p>{{education.fromDate | date}} - 
+                <span ng-if="education.toDate != null">{{education.toDate | date}}</span>
+                <span ng-if="education.toDate == null">Now</span>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Certificate -->
+<div class="profile-certificate">
+    <div class="container text-center">
+        <h3>Certificate</h3>
+    </div>
+</div>
+<!-- Experience -->

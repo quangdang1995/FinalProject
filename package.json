@@ -1,0 +1,37 @@
+{
+  "name": "midterm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamdang1710/web-midterm.git"
+  },
+  "author": "Triet Dang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/williamdang1710/web-midterm/issues"
+  },
+  "homepage": "https://github.com/williamdang1710/web-midterm#readme",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "browser-sync-spa": "latest",
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-changed": "latest",
+    "gulp-concat": "latest",
+    "gulp-jshint": "latest",
+    "gulp-newer": "latest",
+    "gulp-ng-annotate": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "latest",
+    "gulp-wiredep": "latest",
+    "jshint": "latest",
+    "run-sequence": "latest",
+    "wiredep": "latest"
+  }
+}

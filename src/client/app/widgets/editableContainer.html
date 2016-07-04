@@ -1,0 +1,13 @@
+<div class="editableContainer" ng-mouseenter="vm.toogleEdit()" ng-mouseleave="vm.toogleEdit()">
+    <div class="editableContainer-auxiliary" ng-show="vm.isShowAuxiliary">
+        <button
+            class="btn btn-primary editableContainer-button"
+            type="button"
+            ng-click="vm.edit()">Edit</button>
+        <button
+            class="btn btn-primary editableContainer-button"
+            type="button"
+            ng-click="vm.delete()">Delete</button>
+    </div>  
+    <div ng-Transclude></div>
+</div>

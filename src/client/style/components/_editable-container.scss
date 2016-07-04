@@ -1,0 +1,19 @@
+.editableContainer {
+    position: relative;
+    &-auxiliary {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        
+        opacity: 1;
+        .ng-hide-add, .ng-hide-remove {
+            transition: opacity 0.5s;
+        }
+        .ng-hide {
+            opacity: 0;
+        }
+    }
+    &-button {
+    }
+}

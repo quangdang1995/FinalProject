@@ -1,0 +1,32 @@
+<nav class="navbar navbar-default navbar-fixed-top"> 
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-click="vm.isNavbarCollapse = !vm.isNavbarCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="home">LinkIn</a>
+        </div>
+        
+        <div class="collapse navbar-collapse" uib-collapse="vm.isNavbarCollapse">
+            <ui class="nav navbar-nav">
+                <li><a ui-sref="profile/edit">My profile</a></li>
+                <li><a ui-sref="signIn">Login</a></li>
+            </ui>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input
+                        type="text" class="form-control" placeholder="Search"
+                        ng-model="vm.selectedUser" uib-typeahead="user as user.firstName for user in vm.users"
+                        typeahead-loading="loadingLocations" typeahead-no-results="noResults">
+                    <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+                    <div ng-show="noResults">
+                        <i class="glyphicon glyphicon-remove"></i> No Results Found
+                    </div>
+                </div>
+                <button class="btn btn-default" type="submit" ng-click="vm.searchUsers()">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
